@@ -3,143 +3,255 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
- '(ansi-color-names-vector ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
- '(custom-enabled-themes (quote (deeper-blue)))
- '(custom-safe-themes (quote ("28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" default)))
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
+ '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
+ '(custom-enabled-themes (quote (manoj-dark)))
+ '(custom-safe-themes
+   (quote
+    ("cb4cb09f1736cfb2a80ef371c33a9868cbf6707ec5af51d61162483d6c3fbb7c" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" default)))
+ '(ensime-sem-high-faces
+   (quote
+    ((var :foreground "#9876aa" :underline
+	  (:style wave :color "yellow"))
+     (val :foreground "#9876aa")
+     (varField :slant italic)
+     (valField :foreground "#9876aa" :slant italic)
+     (functionCall :foreground "#a9b7c6")
+     (implicitConversion :underline
+			 (:color "#808080"))
+     (implicitParams :underline
+		     (:color "#808080"))
+     (operator :foreground "#cc7832")
+     (param :foreground "#a9b7c6")
+     (class :foreground "#4e807d")
+     (trait :foreground "#4e807d" :slant italic)
+     (object :foreground "#6897bb" :slant italic)
+     (package :foreground "#cc7832")
+     (deprecated :strike-through "#a9b7c6"))))
  '(fci-rule-color "#14151E")
- '(send-mail-function (quote smtpmail-send-it))
- '(smtpmail-smtp-server "mail.twc.com")
- '(smtpmail-smtp-service 25)
+ '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-symbol-colors
+   (--map
+    (solarized-color-blend it "#002b36" 0.25)
+    (quote
+     ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
+ '(highlight-symbol-foreground-color "#93a1a1")
+ '(highlight-tail-colors
+   (quote
+    (("#073642" . 0)
+     ("#546E00" . 20)
+     ("#00736F" . 30)
+     ("#00629D" . 50)
+     ("#7B6000" . 60)
+     ("#8B2C02" . 70)
+     ("#93115C" . 85)
+     ("#073642" . 100))))
+ '(hl-bg-colors
+   (quote
+    ("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00")))
+ '(hl-fg-colors
+   (quote
+    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(magit-diff-use-overlays nil)
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
+ '(show-paren-mode t)
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
  '(vc-annotate-background nil)
- '(vc-annotate-color-map (quote ((20 . "#d54e53") (40 . "goldenrod") (60 . "#e7c547") (80 . "DarkOliveGreen3") (100 . "#70c0b1") (120 . "DeepSkyBlue1") (140 . "#c397d8") (160 . "#d54e53") (180 . "goldenrod") (200 . "#e7c547") (220 . "DarkOliveGreen3") (240 . "#70c0b1") (260 . "DeepSkyBlue1") (280 . "#c397d8") (300 . "#d54e53") (320 . "goldenrod") (340 . "#e7c547") (360 . "DarkOliveGreen3"))))
- '(vc-annotate-very-old-color nil))
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#d54e53")
+     (40 . "goldenrod")
+     (60 . "#e7c547")
+     (80 . "DarkOliveGreen3")
+     (100 . "#70c0b1")
+     (120 . "DeepSkyBlue1")
+     (140 . "#c397d8")
+     (160 . "#d54e53")
+     (180 . "goldenrod")
+     (200 . "#e7c547")
+     (220 . "DarkOliveGreen3")
+     (240 . "#70c0b1")
+     (260 . "DeepSkyBlue1")
+     (280 . "#c397d8")
+     (300 . "#d54e53")
+     (320 . "goldenrod")
+     (340 . "#e7c547")
+     (360 . "DarkOliveGreen3"))))
+ '(vc-annotate-very-old-color nil)
+ '(weechat-color-list
+   (quote
+    (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
-(setq inferior-lisp-program "sbcl")
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
-(electric-indent-mode +1)
+ '(show-paren-match ((t (:background "color-97")))))
+
+;; MELPA repository
 (require 'package)
-
-;; If you want to use latest version
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-
-;; If you want to use last tagged version
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(add-to-list 'package-archives
+	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
-(ac-config-default)
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)
 
-(add-hook 'slime-mode-hook 'set-up-slime-ac)
-(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'slime-repl-mode))
+;; helm
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
 
-;; Set your lisp system and, optionally, some contribs
-(setq inferior-lisp-program "/opt/sbcl/bin/sbcl")
-(setq slime-contribs '(slime-fancy))
+(helm-mode 1)
 
-(add-hook 'slime-repl-mode-hook 'auto-complete-mode)
-(add-hook 'slime-repl-mode-hook 'paredit-mode)
-(add-hook 'slime-repl-mode-hook 'add-ac-slime-fuzzy)
-(add-hook 'slime-mode-hook 'add-ac-slime-fuzzy)
-(define-key global-map (kbd "C-x t") 'switch-to-completions)
-
-
-(add-hook 'dired-load-hook
-          (lambda ()
-            (load "dired-x")
-            ;; Set dired-x global variables here.  For example:
-            (setq dired-guess-shell-gnutar "gtar")
-            (setq dired-x-hands-off-my-keys nil)
-            ))
-(add-hook 'dired-mode-hook
-          (lambda ()
-            ;; Set dired-x buffer-local variables here.  For example:
-            (dired-omit-mode 1)
-            ))
-;; Configure flymake for Python
-(when (load "flymake" t)
-  (defun flymake-pylint-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-		       'flymake-create-temp-inplace))
-	   (local-file (file-relative-name
-			temp-file
-			(file-name-directory buffer-file-name))))
-      (list "epylint" (list local-file))))
-  (add-to-list 'flymake-allowed-file-name-masks
-	       '("\\.py\\'" flymake-pylint-init)))
-
-;; Set as a minor mode for Python
-(add-hook 'python-mode-hook '(lambda () (flymake-mode)))
-(require 'ido)
-(ido-mode t)
-(setq user-mail-address "canhtoannguyen60@gmail.com")
-(require 'smtpmail)
-(require 'starttls)
-
-(setq message-send-mail-function 'smtpmail-send-it)
-(defun gnutls-available-p ()
-  "Function redefined in order not to use built-in GnuTLS support"
-  nil)
-(setq starttls-gnutls-program "gnutls-cli")
-(setq starttls-use-gnutls t)
-(setq smtpmail-stream-type 'starttls)
-(setq smtpmail-smtp-server "posteo.de")
-(setq smtpmail-smtp-service 587) ;;587(starttls) or 465(tls/ssl)
-(setq starttls-extra-arguments '("--priority" "NORMAL:%COMPAT"))
-
-
-;; use IPython
-(setq-default py-shell-name "ipython")
-(setq python-shell-interpreter "/home/toannc/anaconda3/bin/ipython3")
-(setq-default py-which-bufname "IPython")
-;;use the wx backend, for both mayavi and matplotlib
-(setq py-python-command-args
-      '("--gui=wx" "--pylab=wx" "-colors" "LightBG"))
-(setq py-force-py-shell-name-p t)
-
-;; switch to the interpreter after executing code
-(setq py-shell-switch-buffers-on-execute-p t)
-(setq py-switch-buffers-on-execute-p t)
-;; don't split windoes
-(setq py-split-windows-on-execute-p nil)
-;;try to automagically figure out indendation
-(setq py-smart-indendation t)
-
-;; show column-number-mode
+;; display column and row information
 (setq column-number-mode t)
 
-;; python elpy
-(require 'package)
-(add-to-list 'package-archives' ("elpy" . "http://jorgenschaefer.github.io/packages/"))
+;; ace-window for faster switching between visible windows
+(global-set-key (kbd "M-P") 'ace-window)
 
-;; faster switching between windows in the same frame
-(windmove-default-keybindings)
+;; show-paren-mode to true, which will hightlight matching parenthesis
+(show-paren-mode 1)
+;; auto complete bracket
+(electric-pair-mode 1)
+;; highlight entire expression
+(setq show-paren-style 'expression)
 
-;; auto saving and restoring Emacs' previous section
-;; (destop-save-mode 1)
-(setq custom-file "~/.emacs-custom.el")
-(load custom-file)
-(setq-default elpy-mode t)
-(setq-default elpy-enable t)
+;; enable auto complete mode
+(global-auto-complete-mode t)
 
-;;  How to scroll other window backwards? C-M-v does forwards
+;; display time
+(display-time)
 
-(defun scroll-other-window-up ()
-  "Scroll the other window one line up."
+;; enable neotree - sidebar for Emacs
+(global-set-key [f8] 'neotree-toggle)
+
+;; projectile - project management
+(projectile-global-mode)
+(helm-projectile)
+(global-set-key [f9] 'helm-projectile-find-file)
+(global-set-key [f7] 'helm-projectile-find-file-in-known-projects)
+(global-set-key [f6] 'helm-projectile-grep)
+
+;; comment-uncomment line
+(defun toggle-comment-on-line ()
   (interactive)
-  (scroll-other-window -1)
-  )
-(defun scroll-other-window-down ()
-  "Scroll the other window one line down."
+  (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+
+;; flycheck
+;; Now add the following code to your init file to permanently enable syntax checking with Flycheck:
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; disable startup-screen
+(setq inhibit-startup-message t)
+
+;; (desktop-save-mode 1)
+
+(defun copy-line (arg)
+      "Copy lines (as many as prefix argument) in the kill ring.
+      Ease of use features:
+      - Move to start of next line.
+      - Appends the copy on sequential calls.
+      - Use newline as last char even on the last line of the buffer.
+      - If region is active, copy its lines."
+      (interactive "p")
+      (let ((beg (line-beginning-position))
+	    (end (line-end-position arg)))
+	(when mark-active
+	  (if (> (point) (mark))
+	      (setq beg (save-excursion (goto-char (mark)) (line-beginning-position)))
+	    (setq end (save-excursion (goto-char (mark)) (line-end-position)))))
+	(if (eq last-command 'copy-line)
+	    (kill-append (buffer-substring beg end) (< end beg))
+	  (kill-ring-save beg end)))
+      (kill-append "\n" nil)
+      (beginning-of-line (or (and arg (1+ arg)) 2))
+      (if (and arg (not (= 1 arg))) (message "%d lines copied" arg)))
+
+(global-set-key (kbd "C-c C-k") #'copy-line)
+
+(global-set-key (kbd "C-x g") 'magit-status)
+
+
+;; fast code commenting
+
+(global-set-key (kbd "C-M-_") 'comment-region)
+
+(defun toggle-comment-on-line ()
+  "comment or uncomment current line"
   (interactive)
-  (scroll-other-window 1)
+    (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+
+(global-set-key (kbd "C-c l") 'toggle-comment-on-line)
+
+(global-set-key (kbd "C-c r") 'comment-or-uncomment-region)
+
+(defun toggle-comment-on-function ()
+  "comment or uncomment current function"
+  (interactive)
+  (comment-or-uncomment-region (backward-sentence) (forward-sentence)))
+
+(global-set-key (kbd "C-c f") 'toggle-comment-on-function)
+
+;; faster code Copy
+
+(defun copy-function ()
+  "copy the whole function from any point within it"
+  (interactive)
+  (kill-ring-save (backward-sentence) (forward-sentence))
   )
-(global-set-key [C-M-S-up] 'scroll-other-window-up)
-(global-set-key [C-M-S-down] 'scroll-other-window-down)
+
+(global-set-key (kbd "C-c C-c") 'copy-function)
+
+
+;; Emacs lisp auto completion and documentation pop up
+ (require 'ac-slime)
+ (add-hook 'slime-mode-hook 'set-up-slime-ac)
+ (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+ (eval-after-load "auto-complete"
+   '(add-to-list 'ac-modes 'slime-repl-mode))
+
+;; Faster shrink and enlarge frame
+(defun enlarge-window-horizontally-10-times ()
+  (interactive)
+  (enlarge-window-horizontally 10))
+
+(defun enlarge-window-vertically-10-times ()
+  (interactive)
+  (enlarge-window 10))
+
+(defun shrink-window-horizontally-10-times ()
+  (interactive)
+  (shrink-window-horizontally 10))
+
+(defun shrink-window-vertically-10-times ()
+  (interactive)
+  (shrink-window 10))
+
+;; Dumb-jump-go
+(global-set-key (kbd "C-M-p") 'dumb-jump-go)
+(global-set-key (kbd "C-M-b") 'dumb-jump-back)
+
+;; swapping buffer
+(defun swap-buffers-in-windows ()
+  "Put the buffer from the selected window in next window, and vice versa"
+  (interactive)
+  (let* ((this (selected-window))
+     (other (next-window))
+     (this-buffer (window-buffer this))
+     (other-buffer (window-buffer other)))
+    (set-window-buffer other this-buffer)
+    (set-window-buffer this other-buffer)
+    )
+  )
+
+;; Nodejs - REPL
+(add-to-list 'load-path "~/.emacs.d/site-lisp/")
+(require 'nodejs-repl)
